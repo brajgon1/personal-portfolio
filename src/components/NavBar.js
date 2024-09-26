@@ -1,7 +1,8 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import { Navbar, Container, Nav } from "react-bootstrap";
-// import logo from ''
+import { FaLinkedin, FaGithub } from 'react-icons/fa'
+import logo from "../assets/img/Brandon.png";
 export const NavBar = () => {
 
     const [activeLink, setActiveLink ] = useState('home');
@@ -29,7 +30,7 @@ export const NavBar = () => {
     <NavBar expand="lg" className={scrolled ? "scrolled": ""}>
       <Container>
         <Navbar.Brand href="#home">
-          <img src={} alt="logo" />
+          <img src={logo} alt="logo" />
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav">
           <span className="navbar-toggler-icon"></span>
@@ -42,9 +43,8 @@ export const NavBar = () => {
           </Nav>
           <span className="navbar-text">
             <div className="social-icon">
-                <a href="#"><img src={} alt=""/></a>
-                <a href="#"><img src={} alt=""/></a>
-                <a href="#"><img src={} alt=""/></a>
+                <a href="https://www.linkedin.com/in/brandon-gonzalez-022389133/" target="_blank" rel="noopener noreferrer"><FaLinkedin size={30}/></a>
+                <a href="https://github.com/brajgon1" target="_blank" rel="noopener noreferrer"><FaGithub size={30}/></a>
             </div>
             <button className="vvd" onClick={() => console.log('connect')}><span>Let's Connect</span></button>
           </span>
